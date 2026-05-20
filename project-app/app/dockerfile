@@ -2,7 +2,8 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package.json .
+# Menyalin package.json dan package-lock.json sekaligus
+COPY package*.json ./
 
 RUN npm install
 
